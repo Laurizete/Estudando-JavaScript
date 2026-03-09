@@ -60,3 +60,20 @@ console.log(4 >= 4); // true
 console.log(6 <= 5); // false
 console.log(3 === 3); // true
 console.log(3 !== 4); // true
+
+//10 comparação de idênticos
+console.log(5 == "5"); // true (comparação de valor)
+console.log(5 === "5"); // false (comparação de valor e tipo)
+console.log(null == undefined); // true (comparação de valor)
+console.log(null === undefined); // false (comparação de valor e tipo)
+console.log(9 +"9"); // "99" (comparação de valor)
+console.log(9 === "9"); // false (comparação de valor e tipo)
+console.log(9 !== "9"); // true (comparação de valor e tipo)
+console.log(9 !="9")// true (comparação de valor)
+
+//11 - operador lógico
+console.log(true && false); // false  AND
+console.log(true || false); // true OR
+console.log(!true); // false NOT
+console.log(!false); // true
+
