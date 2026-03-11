@@ -77,3 +77,26 @@ console.log(true || false); // true OR
 console.log(!true); // false NOT
 console.log(!false); // true
 
+//12 - empty values
+console.log(typeof null,typeof undefined); // object (tipo especial que representa ausência de valor)
+console.log(typeof null); // object (tipo especial que representa ausência de valor)
+console.log(typeof undefined); // undefined (valor não definido)
+console.log(null); // null
+console.log(undefined); // undefined
+
+//13-mudança de tipos
+console.log("teste" * "opa"); // NaN (não é possível converter "teste" e "opa" para números)
+console.log("5" + 3); // "53" (concatenação de string)
+console.log("5" - 3); // 2 (conversão de string para número)
+console.log("5" * 2); // 10 (conversão de string para número)
+console.log("10" / 2); // 5 (conversão de string para número)
+console.log("abc" * 2); // NaN (não é possível converter "abc" para número)
+console.log(5 + true); // 6 (true é convertido para 1)
+console.log(5 + false); // 5 (false é convertido para 0)
+console.log("5" + true); // "5true" (concatenação de string)
+console.log("5" + false); // "5false" (concatenação de string)
+console.log("5" - true); // 4 (conversão de string para número e true é convertido para 1)
+console.log("5" - false); // 5 (conversão de string para número e false é convertido para 0)
+
+
+
