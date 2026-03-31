@@ -64,5 +64,108 @@ console.log(nomeCompleto, cidade);
 }
 console.log(user === "João"); // true
 console.log(user === "Maria"); // false
-    
 
+// 8 - else
+const idadeUsuario = 15;
+if (idadeUsuario >= 18) {
+  console.log("Você é maior de idade.");
+} else {
+  console.log("Você é menor de idade.");
+}
+
+const diaSemana = "sábado";
+if (diaSemana === "sábado" || diaSemana === "domingo") {
+  console.log("É fim de semana!");
+} else {
+  console.log("É dia de semana.");
+}
+
+// 9 - else if
+const hora = 14;
+if (hora < 12) {
+  console.log("Bom dia!");
+} else if (hora < 18) {
+  console.log("Boa tarde!");
+} else {
+  console.log("Boa noite!");
+}
+
+const nota = 85;
+if (nota >= 90) {
+  console.log("Excelente!");
+} else if (nota >= 70) {
+  console.log("Bom trabalho!");
+} else if (nota >= 50) {
+  console.log("Você passou, mas pode melhorar.");
+} else {
+  console.log("Infelizmente, você não passou.");
+}
+
+// 10 - while
+let p = 0;
+while (p < 5) {
+  console.log(`repetindo ${p}`)
+  p = p + 1;
+}
+
+// loop infinito
+// while (true) {
+//   console.log("Este loop nunca termina!");
+// }
+ 
+let x = 10;
+while (x > 5) {
+  console.log(`Imprimindo ${x}`);
+x--; // diminui o valor de x em 1 a cada repetição
+}
+
+// 11 - do while
+let o = 10;
+do {
+  console.log(`Valor de o: ${o}`);
+  o++;
+} while (o < 5);
+
+let z = 10;
+do {
+  console.log(`Valor de z: ${z}`);
+  z--;
+} while (z > 5);
+
+//12 - for
+
+for (let i = 0; i < 5; i++)  // t ++ é o mesmo que i = i + 1 encrementador 
+  console.log(`Contagem: ${i}`);//
+
+const frutas = ["maçã", "banana", "laranja"];
+for (let j = 0; j < frutas.length; j++) {
+  console.log(`Fruta: ${frutas[j]}`);
+}
+
+//indentação
+for (let k = 0; k < 5; k++) {
+  if( k * 2 > 5) {  
+    console.log (`Maior que 10! ${k}`)
+  } else {
+    if(k * 2 === 10) {
+      console.log(`Igual a 10: ${k}`)
+    }
+  }
+}
+//14 break
+for (let m = 0; m < 10; m++) {
+  if (m === 5) {
+    break; // Interrompe o loop quando m é igual a 5
+  }
+  console.log(`Valor de m: ${m}`);
+}
+
+// 15 continue
+for (let n = 0; n < 10; n++) {
+  //operador de resto = % verifica se n é par ou impar, se o resultado for 0, n é par
+  if (n % 2 === 0) {
+    console.log("numero é par!");
+    continue; // Pula a iteração atual se n for par
+  }
+  console.log(`Valor de n: ${n}`);
+} 
