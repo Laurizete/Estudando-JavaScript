@@ -170,3 +170,40 @@ for (let n = 0; n < 10; n++) {
   }
   console.log(`Valor de n: ${n}`);
 } 
+
+// 16 - switch
+const dia = "terça-feira";
+switch (dia) {
+  case "segunda-feira":
+    console.log("Hoje é segunda-feira.");
+    break;
+  case "terça-feira":
+    console.log("Hoje é terça-feira.");
+    break;
+  case "quarta-feira":
+    console.log("Hoje é quarta-feira.");
+    break;
+  case "quinta-feira":
+    console.log("Hoje é quinta-feira.");
+    break;
+  case "sexta-feira":
+    console.log("Hoje é sexta-feira.");
+    break;
+  default: // caso nenhum dos casos anteriores seja verdadeiro
+    console.log("Hoje é fim de semana!");
+}
+//switvh errado
+const cor = "vermelho";
+switch (cor) {
+  case "azul":
+    console.log("A cor é azul.");
+    break;
+  case "verde":
+    console.log("A cor é verde.");
+    break;
+  case "amarelo":
+    console.log("A cor é amarelo.");
+    break;
+  default:
+    console.log("Cor desconhecida.");
+}
