@@ -161,6 +161,7 @@ for (let m = 0; m < 10; m++) {
 }
 
 // 15 continue
+
 for (let n = 0; n < 10; n++) {
   //operador de resto = % verifica se n é par ou impar, se o resultado for 0, n é par
   if (n % 2 === 0) {
