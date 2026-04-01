@@ -51,3 +51,21 @@ function teste() {
 }
 teste();
 // console.log(x); // erro, variável x não existe fora da função    
+
+// 4 - escopo aninhado
+
+function funcaoExterna() {
+    const a = 10; // variável local da função externa
+
+    function funcaoInterna() {
+        const b = 20; // variável local da função interna
+        console.log('a dentro da função interna é: ' + a); // acessa a variável da função externa
+        console.log('b dentro da função interna é: ' + b); // acessa a variável local da função interna
+    }
+
+    funcaoInterna();
+    // console.log(b); // erro, variável b não existe na função externa
+}
+funcaoExterna();
+
+// 5 - função anônima e arrow function
