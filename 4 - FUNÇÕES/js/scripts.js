@@ -186,6 +186,25 @@ const anotherCounter = createCounter();
 anotherCounter(); // imprime 1, pois anotherCounter é um novo closure com sua própria variável count
 counter(); // imprime 4, pois counter continua a acessar a variável count do primeiro closure criado por createCounter
 
+// 11 - recursão
+const untilTen = (n,m) => {
+   if (n > 10) { 
+ console.log("Número maior que 10, encerrando recursão.");
+} else {
+    console.log(n);
+    untilTen(n + m, m); // chama a função novamente com n incrementado por m
+}
+}
+untilTen(1, 2); // inicia a recursão com n = 1 e m = 2
+
+function factorial(n) {
+    if (n === 0) { // caso base: o fatorial de 0 é 1
+        return 1;
+    }
+    return n * factorial(n - 1); // chamada recursiva: n! = n * (n - 1)!
+}
+console.log(factorial(5)); // retorna 120, pois 5! = 5 * 4 * 3 * 2 * 1 = 120
+console.log(factorial(0)); // retorna 1, pois 0! = 1
 
 
 
