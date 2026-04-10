@@ -100,3 +100,35 @@ console.log(pessoa.nome.length); // - acessando a propriedade nome do objeto pes
 
 console.log(pessoa["nome"].length); // - acessando a propriedade nome do objeto pessoa usando a notação de colchetes e depois acessando a propriedade length da string nome, retorna o número de caracteres da string nome
 
+// 5 - mais sobre objetos criando e deletando propriedades
+
+const carro = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    ano: 2020,
+    cor: "prata"
+};
+
+console.log(carro);
+
+carro.ano = 2021; // - modificando a propriedade ano do objeto carro
+
+console.log(carro);
+
+carro["cor"] = "preto"; // - modificando a propriedade cor do objeto carro usando a notação de colchetes
+
+console.log(carro);
+
+carro.preco = 50000; // - adicionando uma nova propriedade preco ao objeto carro
+
+console.log(carro);
+
+delete carro.modelo; // - deletando a propriedade modelo do objeto carro
+
+console.log(carro);
+
+delete carro["marca"]; // - deletando a propriedade marca do objeto carro usando a notação de colchetes
+
+console.log(carro);
+
+
