@@ -204,3 +204,66 @@ a.age = 25; // - modificando a propriedade age do objeto pessoa4 através da ref
  delete b .age; // - deletando a propriedade age do objeto pessoa4 através da referência b
  console.log(a); // - a não tem mais a propriedade age, pois a e b apontam para o mesmo objeto
  console.log(b); // - b não tem mais a propriedade age, pois a e b apontam para o mesmo objeto
+
+ // 10 - loop em arrays 
+const numeros3 = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < numeros3.length; i++) { // - usando um loop for para iterar sobre os elementos do array numeros3
+    console.log(numeros3[i]); // - acessando cada elemento do array usando o índice i
+}
+
+const frutas3 = ['banana', 'maçã', 'laranja'];
+
+for (let i = 0; i < frutas3.length; i++) { // - usando um loop for para iterar sobre os elementos do array frutas3
+    console.log(`Listando as frutas: ${frutas3[i]}`); // - acessando cada elemento do array usando o índice i
+}
+
+// 11 - push e pop
+
+const numeros4 = [1, 2, 3];
+
+numeros4.push(4); // - push é um método dos arrays que adiciona um elemento ao final do array
+
+console.log(numeros4);
+
+numeros4.push(5, 6); // - push pode adicionar múltiplos elementos ao final do array
+
+console.log(numeros4);
+
+numeros4.pop(); // - pop é um método dos arrays que remove o último elemento do array e retorna esse elemento
+
+console.log(numeros4);
+
+const itemRemovido = numeros4.pop(); // - pop retorna o elemento removido, que pode ser armazenado em uma variável
+
+console.log(itemRemovido); // - exibindo o elemento removido
+
+console.log(numeros4); // - exibindo o array após a remoção do elemento 
+
+// 12 - shift e unshift
+
+const numeros5 = [1, 2, 3];
+
+numeros5.unshift(0); // - unshift é um método dos arrays que adiciona um elemento no início do array
+
+console.log(numeros5);
+
+numeros5.unshift(-2, -1); // - unshift pode adicionar múltiplos elementos no início do array
+
+console.log(numeros5);
+
+numeros5.shift(); // - shift é um método dos arrays que remove o primeiro elemento do array e retorna esse elemento
+
+console.log(numeros5);
+
+const itemRemovidoShift = numeros5.shift(); // - shift retorna o elemento removido, que pode ser armazenado em uma variável
+
+console.log(itemRemovidoShift); // - exibindo o elemento removido
+
+console.log(numeros5); // - exibindo o array após a remoção do elemento
+
+// 13 - indexOf e lastIndexOf
+
+
+
+ 
