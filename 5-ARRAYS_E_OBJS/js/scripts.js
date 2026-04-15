@@ -264,6 +264,97 @@ console.log(numeros5); // - exibindo o array após a remoção do elemento
 
 // 13 - indexOf e lastIndexOf
 
+const frutas4 = ['banana', 'maçã', 'laranja', 'maçã'];
 
+console.log(frutas4.indexOf('maçã')); // - indexOf é um método dos arrays que retorna o índice da primeira ocorrência de um elemento no array
 
- 
+console.log(frutas4.lastIndexOf('maçã')); // - lastIndexOf é um método dos arrays que retorna o índice da última ocorrência de um elemento no array
+
+console.log(frutas4.indexOf('uva')); // - se o elemento não for encontrado no array, indexOf retorna -1
+
+console.log(frutas4.lastIndexOf('uva')); // - se o elemento não for encontrado no array, lastIndexOf retorna -1
+
+// 14 - slice 
+ const testeSlice = ["a", "b", "c", "d", "e", "f", "g"];
+
+const subArray = testeSlice.slice(1, 4); // - slice é um método dos arrays que retorna uma cópia de uma parte do array, especificada pelos índices de início e fim
+
+console.log(subArray); // - exibindo o subarray retornado por slice
+
+console.log(testeSlice); // - o array original permanece inalterado após o uso de slice
+
+const subArray2 = testeSlice.slice(3); // - se o índice de fim for omitido, slice retorna todos os elementos a partir do índice de início até o final do array
+
+console.log(subArray2); // - exibindo o subarray retornado por slice com índice de fim omitido
+
+const subArray3 = testeSlice.slice(-3); // - se o índice de início for negativo, slice conta a partir do final do array
+
+console.log(subArray3); // - exibindo o subarray retornado por slice com índice de início negativo
+
+const subArray4 = testeSlice.slice(-5, -2); // - slice também pode usar índices negativos para especificar o início e o fim do subarray
+
+console.log(subArray4); // - exibindo o subarray retornado por slice com índices negativos para início e fim
+
+// 15 - forEach
+
+const numeros6 = [1, 2, 3, 4, 5];
+
+numeros6.forEach(function(numero) { // - forEach é um método dos arrays que executa uma função para cada elemento do array
+    console.log(numero); // - exibindo cada elemento do array usando a função passada para forEach
+});
+
+const frutas5 = ['banana', 'maçã', 'laranja'];
+
+frutas5.forEach(function(fruta, indice) { // - a função passada para forEach pode receber o elemento e o índice como parâmetros
+    console.log(`Fruta: ${fruta}, Índice: ${indice}`); // - exibindo cada fruta e seu índice usando a função passada para forEach
+});
+
+const posts = [
+    { id: 1, title: "Post 1" },
+    { id: 2, title: "Post 2" },
+    { id: 3, title: "Post 3" },
+];
+
+posts.forEach(function(post) { // - usando forEach para iterar sobre um array de objetos
+    console.log(`ID: ${post.id}, Title: ${post.title}`); // - exibindo as propriedades de cada objeto usando a função passada para forEach
+});
+const posts2 = [
+    { titles: "Primeiro Post", category: " PHP" },
+    { titles: "Segundo Post",category: " JavaScript" },
+];
+posts2.forEach(function(post) { // - usando forEach para iterar sobre um array de objetos
+    console.log(`Exibir post: ${post.titles}, da categoria : ${post.category}`); // - exibindo as propriedades de cada objeto usando a função passada para forEach
+});
+
+// 16 - includes
+
+const brands = ["BMW", "Audi", "Mercedes"];
+
+console.log(brands.includes("BMW")); // - includes é um método dos arrays que verifica se um elemento está presente no array, retorna true ou false
+console.log(brands.includes("Tesla")); // - se o elemento não estiver presente no array, includes retorna false
+
+if (brands.includes("Audi")) { // - usando includes em uma estrutura condicional para verificar a presença de um elemento no array
+    console.log("A marca Audi está presente no array."); // - se Audi estiver presente, exibe esta mensagem
+} else {
+    console.log("A marca Audi não está presente no array."); // - se Audi não estiver presente, exibe esta mensagem
+}
+
+const numbers = [1, 2, 3, 4, 5];
+
+console.log(numbers.includes(3)); // - includes verifica se o número 3 está presente no array numbers, retorna true
+
+console.log(numbers.includes(6)); // - includes verifica se o número 6 está presente no array numbers, retorna false
+
+const fruits = ['banana', 'maçã', 'laranja'];
+
+console.log(fruits.includes('maçã')); // - includes verifica se a string 'maçã' está presente no array fruits, retorna true
+
+console.log(fruits.includes('uva')); // - includes verifica se a string 'uva' está presente no array fruits, retorna false
+
+// 17 - reverse
+
+const numbers2 = [1, 2, 3, 4, 5];
+
+numbers2.reverse(); // - reverse é um método dos arrays que inverte a ordem dos elementos do array
+
+console.log(numbers2); // - exibindo o array após a inversão dos elementos
