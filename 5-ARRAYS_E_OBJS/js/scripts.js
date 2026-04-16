@@ -358,3 +358,46 @@ const numbers2 = [1, 2, 3, 4, 5];
 numbers2.reverse(); // - reverse é um método dos arrays que inverte a ordem dos elementos do array
 
 console.log(numbers2); // - exibindo o array após a inversão dos elementos
+
+//METODOS DE STRINGS
+
+// 18 - trim
+
+const text = "   Olá, mundo!   ";
+
+console.log(text.trim()); // - trim é um método das strings que remove os espaços em branco do início e do fim da string
+
+console.log(text); // - a string original permanece inalterada após o uso de trim
+
+const text2 = "   JavaScript é incrível!   ";
+
+console.log(text2.trim()); // - trim remove os espaços em branco do início e do fim da string
+
+console.log(text2); // - a string original permanece inalterada após o uso de trim
+
+//
+19 - padStart 
+const number = "5";
+
+console.log(number.padStart(3, "0")); // - padStart é um método das strings que adiciona caracteres no início da string até atingir o comprimento especificado
+
+console.log(number); // - a string original permanece inalterada após o uso de padStart
+
+const text3 = "Hello";
+
+console.log(text3.padStart(10, "*")); // - padStart adiciona asteriscos no início da string até atingir o comprimento de 10 caracteres
+
+console.log(text3); // - a string original permanece inalterada após o uso de padStart
+
+// 20 - padEnd
+const number2 = "5";
+
+console.log(number2.padEnd(3, "0")); // - padEnd é um método das strings que adiciona caracteres no final da string até atingir o comprimento especificado
+
+console.log(number2); // - a string original permanece inalterada após o uso de padEnd
+
+const text4 = "Hello";
+
+console.log(text4.padEnd(10, "*")); // - padEnd adiciona asteriscos no final da string até atingir o comprimento de 10 caracteres
+
+console.log(text4); // - a string original permanece inalterada após o uso de padEnd
