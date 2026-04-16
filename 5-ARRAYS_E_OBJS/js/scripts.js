@@ -514,16 +514,47 @@ console.log(terceiro2); // - exibindo a variável terceiro2 extraída do array n
 
 // 27 - json
 
-const pessoa6 = {
+const myJson = {
     nome: "Mariana",
     idade: 32,
     cidade: "Recife"
 };
 
-const pessoaJson = JSON.stringify(pessoa6); // - JSON.stringify é um método que converte um objeto JavaScript em uma string JSON
+const pessoaJson = JSON.stringify(myJson); // - JSON.stringify é um método que converte um objeto JavaScript em uma string JSON
 
-console.log(pessoaJson); // - exibindo a string JSON resultante da conversão do objeto pessoa6
+console.log(pessoaJson); // - exibindo a string JSON resultante da conversão do objeto myJson   
 
 const pessoaObjeto = JSON.parse(pessoaJson); // - JSON.parse é um método que converte uma string JSON de volta para um objeto JavaScript
 
 console.log(pessoaObjeto); // - exibindo o objeto resultante da conversão da string JSON de volta para um objeto
+
+// 28 - json para objeto  e objeto para json
+
+const jsonString = '{"nome": "Ricardo", "idade": 45, "cidade": "Salvador"}';
+
+const pessoaFromJson = JSON.parse(jsonString); // - convertendo a string JSON para um objeto JavaScript usando JSON.parse
+
+console.log(pessoaFromJson); // - exibindo o objeto resultante da conversão da string JSON
+
+const pessoaToJson = JSON.stringify(pessoaFromJson); // - convertendo o objeto de volta para uma string JSON usando JSON.stringify
+
+console.log(pessoaToJson); // - exibindo a string JSON resultante da conversão do objeto de volta para JSON
+
+// json invalido
+
+const invalidJsonString = '{"nome": "Ricardo", "idade": 45, "cidade": "Salvador"'; // - esta string JSON é inválida porque falta a chave de fechamento }
+
+try {
+    const pessoaInvalid = JSON.parse(invalidJsonString); // - tentando converter a string JSON inválida para um objeto JavaScript usando JSON.parse
+} catch (error) {
+    console.error("Erro ao parsear JSON:", error); // - capturando e exibindo o erro que ocorre ao tentar parsear a string JSON inválida
+
+}
+myObject.isOpenToWork = true; // - adicionando uma nova propriedade isOpenToWork ao objeto myObject e atribuindo o valor true
+
+console.log(myObject); // - exibindo o objeto myObject após a adição da nova propriedade isOpenToWork   
+const myNewJson = JSON.stringify(myObject); // - convertendo o objeto myObject atualizado para uma string JSON usando JSON.stringify
+
+console.log(myNewJson); // - exibindo a string JSON resultante da conversão do objeto myObject atualizado
+console.log(typeof myNewJson); // - verificando o tipo da variável myNewJson, que deve ser string, pois é o resultado da conversão do objeto para JSON
+
