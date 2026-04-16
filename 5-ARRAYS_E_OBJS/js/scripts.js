@@ -375,8 +375,7 @@ console.log(text2.trim()); // - trim remove os espaços em branco do início e d
 
 console.log(text2); // - a string original permanece inalterada após o uso de trim
 
-//
-19 - padStart 
+// 19 - padStart 
 const number = "5";
 
 console.log(number.padStart(3, "0")); // - padStart é um método das strings que adiciona caracteres no início da string até atingir o comprimento especificado
@@ -389,9 +388,8 @@ console.log(text3.padStart(10, "*")); // - padStart adiciona asteriscos no iníc
 
 console.log(text3); // - a string original permanece inalterada após o uso de padStart
 
-// 20 - padEnd
+//19.1 - padEnd
 const number2 = "5";
-
 console.log(number2.padEnd(3, "0")); // - padEnd é um método das strings que adiciona caracteres no final da string até atingir o comprimento especificado
 
 console.log(number2); // - a string original permanece inalterada após o uso de padEnd
@@ -401,3 +399,131 @@ const text4 = "Hello";
 console.log(text4.padEnd(10, "*")); // - padEnd adiciona asteriscos no final da string até atingir o comprimento de 10 caracteres
 
 console.log(text4); // - a string original permanece inalterada após o uso de padEnd
+
+// 20 - split
+
+const sentence = "Olá, mundo! Bem-vindo ao JavaScript.";
+
+const words = sentence.split(" "); // - split é um método das strings que divide a string em um array de substrings com base em um separador especificado
+
+console.log(words); // - exibindo o array de palavras resultante do split
+
+// 21 - join
+
+const words2 = ["Olá", "mundo", "JavaScript"];
+
+const sentence2 = words2.join(" "); // - join é um método dos arrays que junta os elementos do array em uma string, usando um separador especificado
+
+console.log(sentence2); // - exibindo a string resultante do join
+
+const itens2 = ["banana", "maçã", "laranja"];
+
+const sentence3 = `precisamos comprar: ${itens2.join(", ")}`; // - usando join para criar uma string a partir de um array de itens, separando os itens por vírgula e espaço
+console.log(sentence3); // - exibindo a string resultante do join
+
+// 22 - repeat
+
+const text5 = "Olá! ";
+
+console.log(text5.repeat(3)); // - repeat é um método das strings que repete a string um número especificado de vezes
+
+console.log(text5); // - a string original permanece inalterada após o uso de repeat
+
+const text6 = "JavaScript é divertido! ";
+
+console.log(text6.repeat(2)); // - repeat repete a string "JavaScript é divertido! " duas vezes
+
+console.log(text6); // - a string original permanece inalterada após o uso de repeat
+
+// 23 - rest operator
+
+const somaInfinita = (...args) => { // - o rest operator (...) permite que uma função aceite um número indefinido de argumentos como um array
+    let total = 0;
+    for (let i = 0; i < args.length; i++) {
+        total += args[i]; // - somando cada argumento passado para a função
+    }
+    return total; // - retornando o total da soma dos argumentos
+};
+
+console.log(somaInfinita(1, 2, 3));// - usando a função somaInfinita com três argumentos, o rest operator permite que a função lide com isso sem problemas
+console.log(somaInfinita(14, 57, 26, 87)); // - usando a função somaInfinita com diferentes números de argumentos, o rest operator permite que a função lide com isso sem problemas
+
+// 24 - for...of
+
+const somaInfinita2 = (...args) => { // - usando o rest operator para aceitar um número indefinido de argumentos
+    let total = 0;
+    for (const num of args) { // - for...of é uma estrutura de loop que itera sobre os elementos de um array ou outros objetos iteráveis
+        total += num; // - somando cada número iterado
+    }
+    return total; // - retornando o total da soma dos argumentos
+};
+
+console.log(somaInfinita2(1, 2, 3)); // - usando a função somaInfinita2 com três argumentos, o rest operator e o for...of permitem que a função lide com isso sem problemas
+console.log(somaInfinita2(14, 57, 26, 87)); // - usando a função somaInfinita2 com diferentes números de argumentos, o rest operator e o for...of permitem que a função lide com isso sem problemas
+
+// 24.1 - for...in
+
+const pessoa4 = {
+    nome: "Ana",
+    idade: 28,
+    cidade: "Curitiba"
+};
+
+for (const chave in pessoa4) { // - for...in é uma estrutura de loop que itera sobre as chaves de um objeto
+    console.log(`${chave}: ${pessoa4[chave]}`); // - exibindo cada chave e seu valor correspondente usando a notação de colchetes
+}
+
+// 25 - destructuring em objetos
+
+const pessoa5 = {
+    nome: "Lucas",
+    idade: 35,
+    cidade: "Porto Alegre"
+};
+
+const { nome, idade, cidade } = pessoa5; // - destructuring é uma sintaxe que permite extrair valores de objetos ou arrays e atribuí-los a variáveis
+
+console.log(nome, idade, cidade); // - exibindo a variável nome extraída do objeto pessoa5
+
+// 25.1 renomear as variáveis durante o destructuring
+
+const { nome: nomePessoa, idade: idadePessoa, cidade: cidadePessoa } = pessoa5; // - durante o destructuring, é possível renomear as variáveis para evitar conflitos ou para dar nomes mais significativos
+
+console.log(nomePessoa); // - exibindo a variável nomePessoa extraída do objeto pessoa5
+
+console.log(idadePessoa); // - exibindo a variável idadePessoa extraída do objeto pessoa5
+
+console.log(cidadePessoa); // - exibindo a variável cidadePessoa extraída do objeto pessoa5 
+
+// 26 - destructuring em arrays
+
+const numeros7 = ["aviao", "submarino", "carro"];
+
+const [primeiro, segundo, terceiro] = numeros7; // - destructuring também pode ser usado em arrays para extrair valores com base na posição dos elementos
+
+console.log(primeiro,segundo,terceiro); // - exibindo a variável primeiro extraída do array numeros7
+
+// 26.1 - ignorando elementos durante o destructuring em arrays
+
+const [primeiro2, , terceiro2] = numeros7; // - durante o destructuring em arrays, é possível ignorar elementos usando vírgulas para pular posições
+
+console.log(primeiro2); // - exibindo a variável primeiro2 extraída do array numeros7
+
+console.log(terceiro2); // - exibindo a variável terceiro2 extraída do array numeros7
+
+
+// 27 - json
+
+const pessoa6 = {
+    nome: "Mariana",
+    idade: 32,
+    cidade: "Recife"
+};
+
+const pessoaJson = JSON.stringify(pessoa6); // - JSON.stringify é um método que converte um objeto JavaScript em uma string JSON
+
+console.log(pessoaJson); // - exibindo a string JSON resultante da conversão do objeto pessoa6
+
+const pessoaObjeto = JSON.parse(pessoaJson); // - JSON.parse é um método que converte uma string JSON de volta para um objeto JavaScript
+
+console.log(pessoaObjeto); // - exibindo o objeto resultante da conversão da string JSON de volta para um objeto
